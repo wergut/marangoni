@@ -1,0 +1,167 @@
+.section-with-slider {
+  max-width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-wrapper {
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.swiper-slide {
+  box-sizing: border-box;
+  opacity: 0;
+  transition-duration: 250ms;
+  transition-property: transform,opacity;
+  height: auto
+}
+
+.swiper-slide-visible {
+  opacity: 1;
+}
+
+.staff-slider {
+
+  .h2 {
+    padding-bottom: 80px;
+  }
+
+  .staff-card {
+
+    .staff-image {
+      margin-bottom: 10px;
+
+      img {
+        height: 490px;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .staff-name {
+      font-family: $--font-default;
+      font-size: 35px;
+      font-weight: 700;
+      line-height: 42px;
+    }
+
+    .staff-position {
+      font-family: $--font-default;
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 24px;
+    }
+  }
+}
+
+.students-work-slider {
+
+  .swiper-button-prev, .swiper-button-next {
+    bottom: 0;
+    top: unset;
+  }
+
+  .swiper-button-next {
+    right: calc(45% - 90px);
+  }
+
+  .swiper-button-prev {
+    right: calc(45% - 20px);
+  }
+
+  .swiper-slide {
+    width: calc(25% - 20px);
+   }
+
+  .swiper-slide-active {
+    width: calc(50% - 20px);
+
+    .work-slide-wrapper {
+
+      .image-wrapper {
+
+        img {
+          height: 450px;
+        }
+      }
+    }
+  }
+
+  .work-slide-wrapper {
+    padding-bottom: 25px;
+    border-bottom: 1px solid $--color-black;
+
+    .image-wrapper {
+      margin-bottom: 20px;
+
+      img {
+        height: 210px;
+        width: 100%;
+        transition: height 0.5s;
+        object-fit: cover;
+      }
+    }
+
+    .work-title {
+      font-family: $--font-default;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 19px;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: $--color-black;
+
+      &:after {
+        content: "";
+        display: block;
+        width: 16px;
+        height: 16px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        background-image: url(../img/icons/swiper-arrow-red.svg);
+      }
+    }
+
+  }
+}
+
+.modal-work-slider {
+  padding-bottom: 90px;
+
+  .swiper-button-prev, .swiper-button-next {
+    bottom: 0;
+    top: unset;
+  }
+
+  .swiper-button-prev {
+    left: 0;
+    right: unset;
+  }
+
+  .swiper-slide {
+
+    img {
+      height: 335px;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+
+
+
+
+
+
+@media (max-width: 1024px) {
+  .swiper-slide {
+    opacity: 1;
+  }
+
+}

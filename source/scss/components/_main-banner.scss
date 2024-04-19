@@ -1,0 +1,27 @@
+.main-banner {
+  margin: 0 0 150px;
+
+  h1 {
+    width: 100%;
+  }
+
+  .banner-wrapper {
+    width: 100%;
+    display: flex;
+
+    .banner-video {
+      width: 66%;
+
+      video, iframe {
+        height: 815px;
+      }
+    }
+
+    .banner-form {
+      padding: 70px 31px;
+      background-color: $--color-black;
+      margin-left: 37px;
+      width: 34%;
+    }
+  }
+}

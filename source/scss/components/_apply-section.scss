@@ -1,0 +1,27 @@
+.apply-section {
+  background-color: $--color-red;
+  padding: 66px 0;
+
+  .title-block {
+    width: 50%;
+
+    .h2 {
+      color: $--color-white;
+      max-width: 450px;
+      font-weight: 700;
+    }
+  }
+
+  .apply-content {
+    width: 50%;
+
+    .description {
+      padding-top: 18px;
+      margin-bottom: 30px;
+
+      p {
+        color: $--color-white;
+      }
+    }
+  }
+}

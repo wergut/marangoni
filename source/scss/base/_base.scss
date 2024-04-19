@@ -1,0 +1,16 @@
+section {
+  margin: 170px 0;
+}
+
+
+.banner-video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  video, iframe {
+    max-width: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}

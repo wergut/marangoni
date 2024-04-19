@@ -1,0 +1,20 @@
+.footer-menu {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+
+  li {
+
+    &:not(:last-of-type) {
+      margin-bottom: 10px;
+    }
+
+    a {
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 21px;
+      letter-spacing: 0.005em;
+      text-transform: capitalize;
+    }
+  }
+}

@@ -1,0 +1,107 @@
+.images-gallery {
+  margin: 170px 0 130px;
+}
+
+.masonry-grid {
+  width: 100%;
+  column-count: 4;
+  height: 620px;
+  gap: 40px;
+  position: relative;
+
+  .grid-item {
+    display: inline-flex;
+    width: 100%;
+    margin-bottom: 40px;
+    position: relative;
+    cursor: pointer;
+
+    .loupe-ico {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 25px;
+      width: 25px;
+      height: 25px;
+      display: block;
+      background-image: url(../img/icons/loupe-white.svg);
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.3s;
+    }
+
+    &:hover {
+
+      .loupe-ico {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    img, video, iframe {
+      object-fit: cover;
+      object-position: top;
+      width: 100%;
+    }
+
+    &:nth-of-type(1), &:nth-of-type(2) {
+      img, video, iframe  {
+        height: 260px;
+      }
+    }
+
+    &:nth-of-type(3) {
+
+      img, video, iframe  {
+        height: 560px;
+      }
+    }
+
+    &:nth-of-type(4) {
+      img, video, iframe  {
+        height: 213px;
+      }
+    }
+
+    &:nth-of-type(5) {
+      img, video, iframe  {
+        height: 307px;
+      }
+    }
+
+    &:nth-of-type(6) {
+      img, video, iframe  {
+        height: 171px;
+      }
+    }
+
+    &:nth-of-type(7) {
+
+      img, video, iframe  {
+        height: 349px;
+      }
+    }
+
+  }
+
+
+}
+
+@media (max-width: 1024px) {
+  .masonry-grid {
+    column-count: 2;
+    height: initial;
+    gap: 24px;
+
+    .grid-item {
+      margin-bottom: 24px;
+    }
+
+    .grid-item:nth-of-type(3) img, .grid-item:nth-of-type(3) video, .grid-item:nth-of-type(3) iframe  {
+      height: 544px;
+    }
+
+  }
+}
