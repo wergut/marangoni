@@ -1,15 +1,17 @@
-.breadcumbs-section {
-  margin: 30px 0;
+.breadcrumbs-section {
+  margin: 20px 0 30px;
 
   a {
 
   }
   .breadcrumb_last, span, a {
-    font-weight: 500;
     font-size: 16px;
+    font-weight: 300;
+    line-height: 19px;
+    color: $--color-grey-3;
   }
   .breadcrumb_last {
-
+    color: $--color-black;
   }
 
   span span {
@@ -23,8 +25,3 @@
   }
 }
 
-@media (max-width: 600px) {
-  .breadcumbs-section {
-    margin: 20px 0;
-  }
-}

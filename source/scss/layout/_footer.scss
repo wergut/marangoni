@@ -1,0 +1,217 @@
+.footer {
+  background-color: $--color-black;
+  position: relative;
+  padding-bottom: 88px;
+  margin-top: 344px;
+
+  .footer-banner {
+    margin-top: -167px;
+    margin-bottom: 90px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: $--color-white;
+    padding: 64px 52px 20px;
+
+    .h2 {
+      width: 100%;
+      margin-bottom: 68px;
+    }
+  }
+
+  .footer-banner-links {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    .link-wrapper {
+      width: 33.33%;
+      padding: 46px 40px 40px;
+
+      &:first-of-type {
+        padding-left: 0;
+      }
+
+      &:nth-of-type(2) {
+        border-right: 1px solid $--color-grey-2;
+        border-left: 1px solid $--color-grey-2;
+      }
+
+      a {
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 34px;
+        color: $--color-black;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        &:after {
+          content: "";
+          display: block;
+          width: 18px;
+          height: 18px;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 18px;
+          background-image: url(../img/icons/arrow-red-ico.svg);
+        }
+      }
+    }
+  }
+
+  .footer-center {
+
+    &:after {
+      content: "";
+      display: block;
+      height: 1px;
+      width: 100%;
+      position: absolute;
+      margin-top: 50px;
+      left: 0;
+      background-color: $--color-white;
+      opacity: 0.4;
+    }
+  }
+
+  .footer-menu {
+    margin-top: 50px;
+    padding-top: 80px;
+  }
+
+  .container-fluid {
+    position: relative;
+    &:before {
+      content: "";
+      display: block;
+      width: 30%;
+      height: calc( 100% + 36px);
+      background-color: $--color-black-2;
+      position: absolute;
+      left: 0;
+      top: 51px;
+      z-index: 0;
+    }
+  }
+
+  .subtitle {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 24px;
+    color: $--color-grey-2;
+    margin-bottom: 20px;
+    z-index: 1;
+    position: relative;
+    text-transform: uppercase;
+  }
+
+  .footer-title {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 18px;
+
+    .footer-logo-title {
+      font-size: 70px;
+      font-weight: 300;
+      line-height: 70px;
+      text-transform: uppercase;
+      color: $--color-white;
+    }
+
+    .btn {
+      margin-left: auto;
+    }
+
+  }
+
+  .footer-description {
+
+    p {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 19px;
+      color: $--color-grey-2;
+    }
+  }
+
+  .footer-contacts {
+    margin-bottom: 35px;
+    z-index: 1;
+    position: relative;
+
+    .footer-contact {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 19px;
+      color: $--color-white;
+      margin-bottom: 20px;
+
+      a {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 19px;
+        color: $--color-white;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    .footer-address {
+
+    }
+    .footer-mail {
+
+    }
+    .footer-phone {
+
+    }
+  }
+
+  .footer-socials {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    .social-link {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 36px;
+      width: 36px;
+      height: 36px;
+    }
+
+    .social-link-facebook {
+      background-image: url(../img/icons/facebook.svg);
+
+      &:hover {
+        background-image: url(../img/icons/facebook-hover.svg);
+      }
+    }
+
+    .social-link-instagram {
+      background-image: url(../img/icons/insta.svg);
+
+      &:hover {
+        background-image: url(../img/icons/insta-hover.svg);
+      }
+    }
+
+    .social-link-tic-toc {
+      background-image: url(../img/icons/tik-toc.svg);
+
+      &:hover {
+        background-image: url(../img/icons/tik-toc-hover.svg);
+      }
+    }
+
+    .social-link + .social-link {
+      margin-left: 15px;
+    }
+  }
+
+}

@@ -1,0 +1,180 @@
+.program-tabs-section {
+
+  .h2 {
+    margin-bottom: 30px;
+  }
+
+  .text-description {
+    margin-bottom: 50px;
+  }
+
+  .program-tab-panel-preview {
+    display: flex;
+
+    .text-description {
+      margin-bottom: 100px;
+    }
+  }
+
+  .program-tab-panel.hidden {
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    max-height: 0;
+    pointer-events: none;
+  }
+
+  .program-tab-panel {
+    opacity: 1;
+    visibility: visible;
+    overflow: visible;
+    max-height: initial;
+    pointer-events: auto;
+    transition: 1s;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100% - 20px);
+
+    .program-links {
+
+      .link-wrapper + .link-wrapper {
+        margin-top: 15px;
+      }
+    }
+
+    .btn-circle {
+      margin-top: auto;
+    }
+  }
+
+  .program-tab-panel-main {
+    .h2 {
+
+      span {
+
+        &:nth-of-type(1) {
+          font-size: 40px;
+          line-height: 48px;
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+
+
+  .program-tab-nav {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -20px;
+    width: calc(100% + 40px);
+
+    .tab-button-col {
+      padding: 0 20px;
+      margin-bottom: 25px;
+      width: 50%;
+
+      &:nth-of-type(1) {
+        display: none;
+      }
+    }
+
+    .tab-nav-button {
+      padding: 25px 40px;
+      border: 1px solid $--color-black;
+      height: 274px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: 0.3s;
+      cursor: pointer;
+
+
+
+      .tab-button-links {
+
+        .link-more {
+          color: $--color-black;
+          height: initial;
+          font-size: 13px;
+          font-weight: 700;
+          line-height: 16px;
+          text-transform: uppercase;
+        }
+
+        .link-back {
+          color: $--color-white;
+          display: flex;
+          align-items: center;
+          opacity: 0;
+          visibility: hidden;
+          overflow: hidden;
+          pointer-events: none;
+          width: 0;
+          font-size: 13px;
+          font-weight: 700;
+          line-height: 16px;
+          text-transform: uppercase;
+          max-height: 0;
+
+          &:before {
+            content: "";
+            display: block;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 12px;
+            margin-right: 10px;
+            width: 12px;
+            height: 12px;
+            background-image: url(../img/icons/arrow-left-white.svg);
+          }
+        }
+
+      }
+
+      .program-tab-title {
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 34px;
+        color: $--color-black;
+
+        span {
+          color: $--color-red;
+        }
+      }
+
+    }
+
+    .tab-nav-button.active {
+      background-color: $--color-red;
+
+      .link-more {
+        opacity: 0;
+        visibility: hidden;
+        overflow: hidden;
+        pointer-events: none;
+        width: 0;
+        display: none;
+      }
+
+      .link-back {
+        opacity: 1;
+        visibility: visible;
+        overflow: visible;
+        pointer-events: auto;
+        width: fit-content;
+        max-height: initial;
+      }
+
+      .program-tab-title {
+        color: $--color-white;
+
+        span {
+          color: inherit;
+        }
+      }
+    }
+
+  }
+
+}

@@ -6,36 +6,36 @@
     width: 100%;
     overflow: hidden;
     background-color: $--color-white;
+    border-bottom: 1px solid $--color-black;
 
-    &:not(:last-of-type) {
-      margin-bottom: 20px;
+    &:last-of-type {
+      border-bottom: 0;
     }
 
     .accordion-item-header {
-      font-size: 21px;
-      font-weight: 600;
-      padding: 36px 25px;
+      font-size: 28px;
+      font-weight: 500;
+      line-height: 34px;
+      color: $--color-black;
       cursor: pointer;
+      transition: 0.3s;
       display: flex;
       width: 100%;
       justify-content: space-between;
       align-items: center;
       position: relative;
+      padding: 25px 42px 25px 0;
 
       &:after {
         content: "";
-        display: block;
-        width: 48px;
-        height: 48px;
-        min-width: 48px;
-        border-radius: 50%;
-        transition: 0.3s;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 24px;
-        background-image: url(../img/icons/arrow-down-white.svg);
+        border: solid $--color-black;
+        border-width: 0 4px 4px 0;
+        display: inline-block;
+        padding: 6px;
+        transform: rotate(45deg);
         position: absolute;
-        right: 25px;
+        right: 3px;
+        transition: 0.3s;
       }
 
     }
@@ -47,11 +47,13 @@
       height: 0;
 
       p {
-        letter-spacing: 0.005em;;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 19px;
       }
 
       .accordion-content-wrapper {
-        padding: 10px 25px 20px;
+        padding-bottom: 25px;
       }
     }
 
@@ -60,9 +62,12 @@
   .accordion-item.active {
 
     .accordion-item-header {
+      color: $--color-red;
 
       &:after {
-        transform: rotate(180deg);
+        transform: rotate(45deg) scale(-1);
+        border-color: $--color-red;
+        margin-top: 12px;
       }
     }
 
@@ -75,13 +80,10 @@
   .accordion {
     .accordion-item {
       .accordion-item-header {
-        padding: 25px 75px 25px 25px;
-        font-size: 16px;
+
 
         &:after {
-          width: 40px;
-          height: 40px;
-          min-width: 40px;
+
         }
       }
     }

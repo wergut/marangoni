@@ -1,0 +1,40 @@
+.page-banner {
+  height: 600px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+
+
+  .page-banner-wrapper {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: inherit;
+    width: 100%;
+    padding: 50px 60px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+  }
+
+  .container {
+    height: inherit;
+    align-items: flex-end;
+  }
+
+  .h2 {
+    color: $--color-black;
+    max-width: 60%;
+
+    b {
+      width: 100%;
+      display: block;
+    }
+  }
+}
+
+.page-banner-title-light {
+
+  .h2 {
+    color: $--color-white;
+  }
+}

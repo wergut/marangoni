@@ -1,0 +1,46 @@
+.content-w-image-section {
+
+  .h2 {
+    margin-bottom: 52px;
+  }
+
+  .content-image {
+
+    img {
+      height: 550px;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .link-red {
+      margin-top: auto;
+    }
+
+
+    .text-description {
+      max-height: 307px;
+      overflow: hidden;
+    }
+  }
+
+  .content-bottom-image {
+    margin-top: 68px;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+
+    img {
+      height: 280px;
+      object-fit: cover;
+      width: 100%;
+      max-width: 440px;
+    }
+  }
+
+}

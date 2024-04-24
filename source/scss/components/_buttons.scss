@@ -10,10 +10,20 @@
   background-image: url(../img/icons/btn-play.svg);
   position: absolute;
   cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: $--color-white;
+    background-image: url(../img/icons/btn-play-hover.svg);
+  }
 }
 
 .btn-play.pause {
   background-image: url(../img/icons/pause-btn.svg);
+
+  &:hover {
+    background-image: url(../img/icons/pause-btn-hover.svg);
+  }
 }
 
 .swiper-button-prev, .swiper-button-next {
@@ -59,7 +69,6 @@
   padding: 0 28px;
   height: 48px;
   width: fit-content;
-  font-family: $--font-default;
   font-size: 13px;
   font-weight: 700;
   display: flex;
@@ -71,9 +80,55 @@
   transition: 0.3s;
 }
 
+.btn-red {
+  color: $--color-white;
+  background-color: $--color-red;
+
+  &:hover {
+    background-color: $--color-red-hover-2;
+  }
+  &:focus {
+    background-color: $--color-red-focus;
+  }
+}
+
+.btn-arrow-down {
+
+  &:after {
+    content: "";
+    display: block;
+    width: 13px;
+    height: 13px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 13px;
+    margin-left: 10px;
+    background-image: url(../img/icons/arrow-white-down.svg);
+  }
+}
+
+.btn-bordered {
+  color: $--color-black;
+  border: 1px solid $--color-black;
+  background-color: transparent;
+
+  &:hover {
+    background-color: $--color-black;
+    color: $--color-white;
+  }
+}
+
 .btn-white {
   background-color: $--color-white;
   color: $--color-red;
+
+  &:hover {
+    background-color: $--color-black;
+  }
+
+  &:focus {
+    color: $--color-red-focus;
+  }
 }
 
 .btn-arrow {
@@ -88,5 +143,47 @@
     background-size: 12px;
     background-image: url(../img/icons/arrow-red-ico.svg);
     margin-left: 10px;
+  }
+
+  &:focus {
+
+    &:after {
+      background-image: url(../img/icons/arrow-red-focus.svg);
+    }
+  }
+
+}
+
+.btn-circle {
+  border-radius: 50%;
+  background-color: $--color-red;
+  width: 130px;
+  min-width: 130px;
+  height: 130px;
+  text-align: center;
+  color: $--color-white;
+
+  &:hover {
+    background-color: $--color-red-hover-2;
+  }
+
+  &:focus {
+    background-color: $--color-red-focus;
+  }
+}
+
+.btn-circle-arrow {
+  flex-direction: column;
+
+  &:before {
+    content: "";
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px;
+    width: 16px;
+    margin-bottom: 20px;
+    height: 16px;
+    background-image: url(../img/icons/arrow-white-rotated.svg);
   }
 }

@@ -1,13 +1,49 @@
 .main-banner {
   margin: 0 0 150px;
 
-  h1 {
+  .h1 {
     width: 100%;
+    margin-bottom: 50px;
+
+    span {
+
+      &:nth-of-type(2) {
+        padding-left: 77px;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .banner-description {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-bottom: 20px;
+
+    p {
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 30px;
+      text-align: right;
+      color: $--color-black;
+
+      span {
+        width: 100%;
+        display: block;
+      }
+    }
   }
 
   .banner-wrapper {
     width: 100%;
     display: flex;
+    position: relative;
+
+    .btn {
+      position: absolute;
+      left: 80px;
+      top: -65px;
+    }
 
     .banner-video {
       width: 66%;

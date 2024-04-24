@@ -1,0 +1,20 @@
+.text-section-w-image {
+
+  .h2 {
+    margin-bottom: 30px;
+  }
+
+  .text-description {
+    margin-bottom: 100px;
+  }
+
+  .image-wrapper {
+
+    img {
+      height: 700px;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+}
