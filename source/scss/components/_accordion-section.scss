@@ -13,3 +13,30 @@
     }
   }
 }
+
+.accordion-section-w-image .image-wrapper img {
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  max-width: 0;
+  height: 0;
+  transition: 0.3s;
+}
+
+.accordion-section-w-image .image-wrapper.show img {
+  opacity: 1;
+  visibility: visible;
+  overflow: visible;
+  max-width: initial;
+  height: initial;
+}
+
+.accordion-section-w-image .accordion-new .accordion-new-item .accordion-new-item-content {
+  max-height: 0;
+  transition: all 0.3s;
+}
+
+.accordion-section-w-image .accordion-new .accordion-new-item.active .accordion-new-item-content {
+  max-height: 3000px;
+}
+

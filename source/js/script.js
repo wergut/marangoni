@@ -111,18 +111,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-  const accordions = document.querySelectorAll('.accordion');
+  const accordions = document.querySelectorAll('.accordion-new');
 
   if (accordions) {
     accordions.forEach(accordion => {
-      const accordionItems = accordion.querySelectorAll('.accordion-item');
+      const accordionItems = accordion.querySelectorAll('.accordion-new-item');
 
       if (accordionItems) {
-        let hasActiveItem = false; // Переменная, которая показывает, есть ли активный элемент в текущем аккордеоне
-
         accordionItems.forEach((item, index) => {
-          const trigger = item.querySelector('.accordion-item-header');
-          const content = item.querySelector('.accordion-item-content');
+          const trigger = item.querySelector('.accordion-new-item-header');
+          const content = item.querySelector('.accordion-new-item-content');
+          const status = item.querySelector('.accordion-new-header-status');
+
+          if (!trigger || !content) {
+            console.error('One or more elements not found in accordion item:', item);
+            return;
+          }
 
           trigger.addEventListener('click', function() {
             const parent = this.parentNode;
@@ -130,29 +134,32 @@ document.addEventListener('DOMContentLoaded', function() {
             if (parent.classList.contains('active')) {
               parent.classList.remove('active');
               content.style.height = '0';
+              if (status) status.textContent = 'view';
             } else {
               accordionItems.forEach(child => {
                 child.classList.remove('active');
-                child.querySelector('.accordion-item-content').style.height = '0';
+                const childContent = child.querySelector('.accordion-new-item-content');
+                const childStatus = child.querySelector('.accordion-new-header-status');
+                if (childContent && childStatus) {
+                  childContent.style.height = '0';
+                  childStatus.textContent = 'view';
+                }
               });
               parent.classList.add('active');
               content.style.height = content.scrollHeight + 'px';
+              if (status) status.textContent = 'hidden';
             }
           });
 
-          // Проверяем, есть ли у текущего элемента класс "active"
-          if (item.classList.contains('active')) {
-            hasActiveItem = true;
+          if (index === 0) {
             item.classList.add('active');
             content.style.height = content.scrollHeight + 'px';
+            if (status) status.textContent = 'hidden';
+          } else {
+            content.style.height = '0';
+            if (status) status.textContent = 'view';
           }
         });
-
-        // Если в аккордеоне нет активного элемента, открываем первый элемент по умолчанию
-        if (!hasActiveItem && accordionItems.length > 0) {
-          accordionItems[0].classList.add('active');
-          accordionItems[0].querySelector('.accordion-item-content').style.height = accordionItems[0].querySelector('.accordion-item-content').scrollHeight + 'px';
-        }
       }
     });
   }
@@ -357,27 +364,31 @@ var swiper6 = new Swiper(".events-slider-main", {
   }
 });
 
-var swiper7 = new Swiper(".cards-slider", {
-  observer: true,
-  observeParents: true,
-  observeSlideChildren: true,
-  slidesPerView: 4,
-  spaceBetween: 30,
-  watchSlidesProgress: true,
-  breakpoints: {
-    // when window width is >= 320px
-    320: {
-      slidesPerView: 1,
-      spaceBetween: 42,
-    },
-    // when window width is >= 480px
-    601: {
-      spaceBetween: 24,
-      slidesPerView: 3,
-    },
-    1024: {
-      slidesPerView: 4,
-      spaceBetween: 40,
-    },
-  }
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const accordionItems = document.querySelectorAll('.accordion-section-w-image .accordion-new-item');
+  const imageWrappers = document.querySelectorAll('.image-wrapper');
+
+  accordionItems.forEach(item => {
+    item.addEventListener('click', function() {
+      const accordionImageNumber = this.getAttribute('data-accordion-image');
+      const accordionImageWrapper = document.querySelector(`.image-wrapper[data-accordion-image="${accordionImageNumber}"]`);
+
+      if (!accordionImageWrapper) {
+        console.error(`Image wrapper for accordion item ${accordionImageNumber} not found.`);
+        return;
+      }
+
+      // Скрыть все изображения во всех врапере, кроме выбранного
+      imageWrappers.forEach(wrapper => {
+        if (wrapper !== accordionImageWrapper) {
+          wrapper.classList.remove('show'); // Убрать класс show у всех врапперов, кроме выбранного
+        }
+      });
+
+      // Отобразить выбранный враппер изображения
+      accordionImageWrapper.classList.add('show'); // Добавить класс show выбранному врапперу
+    });
+  });
 });

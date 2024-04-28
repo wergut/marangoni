@@ -22,39 +22,6 @@
   opacity: 1;
 }
 
-.staff-slider {
-
-  .h2 {
-    padding-bottom: 80px;
-  }
-
-  .staff-card {
-
-    .staff-image {
-      margin-bottom: 10px;
-
-      img {
-        height: 490px;
-        width: 100%;
-        object-fit: cover;
-      }
-    }
-
-    .staff-name {
-      font-size: 35px;
-      font-weight: 700;
-      line-height: 42px;
-      max-width: 70%;
-    }
-
-    .staff-position {
-      font-size: 20px;
-      font-weight: 300;
-      line-height: 24px;
-    }
-  }
-}
-
 .students-work-slider {
 
   .swiper-button-prev, .swiper-button-next {
@@ -247,55 +214,6 @@
   }
 }
 
-.cards-slider {
-
-  .content-card {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-
-    .content-card-image {
-      margin-bottom: 15px;
-
-      img {
-        height: 237px;
-        width: 100%;
-        object-fit: cover;
-      }
-    }
-
-    .content-card-title {
-      font-size: 28px;
-      font-weight: 500;
-      line-height: 34px;
-      color: $--color-black;
-      height: 68px;
-      overflow: hidden;
-      margin-bottom: 10px;
-    }
-
-    .text-description {
-      margin-bottom: 35px;
-
-      p {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -moz-box;
-        -moz-box-orient: vertical;
-        display: -webkit-box;
-        -webkit-line-clamp: 7;
-        -webkit-box-orient: vertical;
-        line-clamp: 7;
-        box-orient: vertical;
-      }
-    }
-
-    .link-red {
-      margin-top: auto;
-    }
-
-  }
-}
 
 
 

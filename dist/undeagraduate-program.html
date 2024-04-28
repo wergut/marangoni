@@ -66,7 +66,7 @@
   </div>
 </section>
 
-<section class="accordion-section">
+<section class="accordion-section accordion-section-w-image margin-control">
   <div class="container">
     <div class="h2">
       <span>
@@ -75,15 +75,21 @@
     </div>
     <div class="row">
       <div class="col-lg-6 col-md-12 col-m-12">
-        <div class="image-wrapper">
+        <div class="image-wrapper show"  data-accordion-image="1">
           <img src="./img/accordion-section-image.png" alt="">
+        </div>
+        <div class="image-wrapper" data-accordion-image="2">
+          <img src="./img/content-section-image.png" alt="">
+        </div>
+        <div class="image-wrapper"  data-accordion-image="3">
+          <img src="./img/content-section-image.png" alt="">
         </div>
       </div>
       <div class="col-lg-6 col-md-12 col-m-12">
-        <div class="accordion">
-          <div class="accordion-item active">
-            <div class="accordion-item-header">Research Innovation: trend forecasting, critical thinking</div>
-            <div class="accordion-item-content">
+        <div class="accordion-new">
+          <div  data-accordion-image="1" class="accordion-new-item active">
+            <div class="accordion-new-item-header">Research Innovation: trend forecasting, critical thinking</div>
+            <div class="accordion-new-item-content">
               <div class="accordion-content-wrapper">
                 <p>
                   1200 With the Miami campus initiated in 2018 and located in the Design District, studying a Bachelor’s of Fine Arts fashion degree at Istituto Marangoni Miami grants students the chance to succeed in the most in-demand fashion careers. Even in the United States, Istituto Marangoni Miami maintains its European foundation by teaching the Italian way of design and fashion but with a twist of the Miami style. IMM students are encouraged to complete their associate degree to then move on to their bachelor’s degree, and have the opportunity for acceptance into a Marangoni master’s program if desired. Once participants complete their degree, they transition into the Istituto Marangoni alumni group alongside major fashion names like Franco Moschino, Domenico Dolce, and Alessandro Sartori.
@@ -94,9 +100,9 @@
               </div>
             </div>
           </div>
-          <div class="accordion-item">
-            <div class="accordion-item-header">Research Innovation: trend forecasting, critical thinking</div>
-            <div class="accordion-item-content">
+          <div  data-accordion-image="2" class="accordion-new-item">
+            <div class="accordion-new-item-header">Research Innovation: trend forecasting, critical thinking</div>
+            <div class="accordion-new-item-content">
               <div class="accordion-content-wrapper">
                 <p>
                   1200 With the Miami campus initiated in 2018 and located in the Design District, studying a Bachelor’s of Fine Arts fashion degree at Istituto Marangoni Miami grants students the chance to succeed in the most in-demand fashion careers. Even in the United States, Istituto Marangoni Miami maintains its European foundation by teaching the Italian way of design and fashion but with a twist of the Miami style. IMM students are encouraged to complete their associate degree to then move on to their bachelor’s degree, and have the opportunity for acceptance into a Marangoni master’s program if desired. Once participants complete their degree, they transition into the Istituto Marangoni alumni group alongside major fashion names like Franco Moschino, Domenico Dolce, and Alessandro Sartori.
@@ -107,9 +113,9 @@
               </div>
             </div>
           </div>
-          <div class="accordion-item">
-            <div class="accordion-item-header">Research Innovation: trend forecasting, critical thinking</div>
-            <div class="accordion-item-content">
+          <div  data-accordion-image="3" class="accordion-new-item">
+            <div class="accordion-new-item-header">Research Innovation: trend forecasting, critical thinking</div>
+            <div class="accordion-new-item-content">
               <div class="accordion-content-wrapper">
                 <p>
                   1200 With the Miami campus initiated in 2018 and located in the Design District, studying a Bachelor’s of Fine Arts fashion degree at Istituto Marangoni Miami grants students the chance to succeed in the most in-demand fashion careers. Even in the United States, Istituto Marangoni Miami maintains its European foundation by teaching the Italian way of design and fashion but with a twist of the Miami style. IMM students are encouraged to complete their associate degree to then move on to their bachelor’s degree, and have the opportunity for acceptance into a Marangoni master’s program if desired. Once participants complete their degree, they transition into the Istituto Marangoni alumni group alongside major fashion names like Franco Moschino, Domenico Dolce, and Alessandro Sartori.
@@ -127,22 +133,24 @@
 </section>
 
 
-<section class="apply-section">
+
+
+<div class="apply-section">
   <div class="container">
-    <div class="title-block">
-      <div class="h2">Apply for Fall 2024</div>
-    </div>
-    <div class="apply-content">
-      <div class="description">
+    <div class="widget widget_text deadline-text direction-left">
+      <h4 class="widgettitle">Apply for Fall 2024</h4>
+      <div class="textwidget">
         <p>Overwhelmed by the application process? Let our admissions representatives walk you through it. Apply now for our upcoming class and embark on your educational path.</p>
       </div>
-      <a href="#" class="btn btn-white btn-arrow">request info</a>
     </div>
+    <a href="#" class="btn btn-white btn-arrow">request info</a>
   </div>
-</section>
+</div>
 
 
-<section class="program-tabs-section">
+
+
+<section class="program-tabs-section margin-control">
   <div class="container">
     <div class="row program-tabs-block">
       <div class="col-lg-6">
@@ -284,61 +292,60 @@
 </section>
 
 
-<section class="cards-slider-section">
+<link rel="stylesheet" href="../../../scss/components/_cards-slider-section.scss">
+<section class="cards-section margin-control">
   <div class="container">
     <div class="h2">
       <span>Beyond</span>
       <span><b>The Classroom</b></span>
     </div>
-    <div class="cards-slider slider-wrapper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div class="content-card">
-            <div class="content-card-image">
-              <img src="./img/content-card-img.png" alt="">
-            </div>
-            <div class="content-card-title">Card title</div>
-            <div class="text-description">
-              <p>Enrich your learning and prepare for work in global contexts with study abroad that exposes you to new perspectives and settings in which to apply your creativity. Our study abroad destinations include Paris, London, Florence, and more.</p>
-            </div>
-            <a href="#" class="link-red link-red-arrow">Read more</a>
+    <div class="row">
+      <div class="col-lg-3 col-md-6 col-m-12">
+        <div class="content-card">
+          <div class="content-card-image">
+            <img src="./img/content-card-img.png" alt="">
           </div>
+          <div class="content-card-title">Card title</div>
+          <div class="text-description">
+            <p>Enrich your learning and prepare for work in global contexts with study abroad that exposes you to new perspectives and settings in which to apply your creativity. Our study abroad destinations include Paris, London, Florence, and more.</p>
+          </div>
+          <a href="#" class="link-red link-red-arrow">Read more</a>
         </div>
-        <div class="swiper-slide">
-          <div class="content-card">
-            <div class="content-card-image">
-              <img src="./img/content-card-img.png" alt="">
-            </div>
-            <div class="content-card-title">Card title</div>
-            <div class="text-description">
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla con</p>
-            </div>
-            <a href="#" class="link-red link-red-arrow">Read more</a>
+      </div>
+      <div class="col-lg-3 col-md-6 col-m-12">
+        <div class="content-card">
+          <div class="content-card-image">
+            <img src="./img/content-card-img.png" alt="">
           </div>
+          <div class="content-card-title">Card title</div>
+          <div class="text-description">
+            <p>Enrich your learning and prepare for work in global contexts with study abroad that exposes you to new perspectives and settings in which to apply your creativity. Our study abroad destinations include Paris, London, Florence, and more.</p>
+          </div>
+          <a href="#" class="link-red link-red-arrow">Read more</a>
         </div>
-        <div class="swiper-slide">
-          <div class="content-card">
-            <div class="content-card-image">
-              <img src="./img/content-card-img.png" alt="">
-            </div>
-            <div class="content-card-title">Card title</div>
-            <div class="text-description">
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla con</p>
-            </div>
-            <a href="#" class="link-red link-red-arrow">Read more</a>
+      </div>
+      <div class="col-lg-3 col-md-6 col-m-12">
+        <div class="content-card">
+          <div class="content-card-image">
+            <img src="./img/content-card-img.png" alt="">
           </div>
+          <div class="content-card-title">Card title</div>
+          <div class="text-description">
+            <p>Enrich your learning and prepare for work in global contexts with study abroad that exposes you to new perspectives and settings in which to apply your creativity. Our study abroad destinations include Paris, London, Florence, and more.</p>
+          </div>
+          <a href="#" class="link-red link-red-arrow">Read more</a>
         </div>
-        <div class="swiper-slide">
-          <div class="content-card">
-            <div class="content-card-image">
-              <img src="./img/content-card-img.png" alt="">
-            </div>
-            <div class="content-card-title">Card title</div>
-            <div class="text-description">
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla con</p>
-            </div>
-            <a href="#" class="link-red link-red-arrow">Read more</a>
+      </div>
+      <div class="col-lg-3 col-md-6 col-m-12">
+        <div class="content-card">
+          <div class="content-card-image">
+            <img src="./img/content-card-img.png" alt="">
           </div>
+          <div class="content-card-title">Card title</div>
+          <div class="text-description">
+            <p>Enrich your learning and prepare for work in global contexts with study abroad that exposes you to new perspectives and settings in which to apply your creativity. Our study abroad destinations include Paris, London, Florence, and more.</p>
+          </div>
+          <a href="#" class="link-red link-red-arrow">Read more</a>
         </div>
       </div>
     </div>
@@ -346,7 +353,7 @@
 </section>
 
 
-<section class="table-section">
+<section class="table-section margin-control">
   <div class="container">
     <div class="title-wrapper">
       <div class="h2">
@@ -397,54 +404,17 @@
 </section>
 
 
-<section class="faq-section">
+
+
+<section class="faq-section margin-control">
   <div class="container">
     <div class="row">
       <div class="col-lg-7 col-md-12 col-m-12">
         <div class="h2"><b>FAQ</b></div>
-        <div class="accordion">
-          <div class="accordion-item active">
-            <div class="accordion-item-header">What is a bachelor’s degree in fashion?</div>
-            <div class="accordion-item-content">
-              <div class="accordion-content-wrapper">
-                <p>
-                  A Bachelor’s Degree in fashion or a Bachelor’s in Fine Arts degree from Istituto Marangoni Miami is a 4-year program established to implement all of the teachings needed in the fashion industry in order for students to succeed once they graduate and are in the real-world of fashion. IMM offers various branches in the fashion bachelor’s degree to choose from based on the applicant's interests and aspirations. A BFA in Fashion Design teaches students the knowledge and skills needed for designing clothing and accessories – pattern cutting, garment technology, etc. all while developing the student’s personal style.
-                </p>
-                <p>
-                  A BFA in Fashion Styling introduces concepts in visual communication, trend forecasting, and the analysis of style and brands to apply to ever changing technologies in the industry. A BFA in Fashion Business highlights the different methods and business types that are part of the global fashion industry through the aspects of management, marketing, and practices.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <div class="accordion-item-header">What is a bachelor’s degree in fashion?</div>
-            <div class="accordion-item-content">
-              <div class="accordion-content-wrapper">
-                <p>
-                  A Bachelor’s Degree in fashion or a Bachelor’s in Fine Arts degree from Istituto Marangoni Miami is a 4-year program established to implement all of the teachings needed in the fashion industry in order for students to succeed once they graduate and are in the real-world of fashion. IMM offers various branches in the fashion bachelor’s degree to choose from based on the applicant's interests and aspirations. A BFA in Fashion Design teaches students the knowledge and skills needed for designing clothing and accessories – pattern cutting, garment technology, etc. all while developing the student’s personal style.
-                </p>
-                <p>
-                  A BFA in Fashion Styling introduces concepts in visual communication, trend forecasting, and the analysis of style and brands to apply to ever changing technologies in the industry. A BFA in Fashion Business highlights the different methods and business types that are part of the global fashion industry through the aspects of management, marketing, and practices.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <div class="accordion-item-header">What is a bachelor’s degree in fashion?</div>
-            <div class="accordion-item-content">
-              <div class="accordion-content-wrapper">
-                <p>
-                  A Bachelor’s Degree in fashion or a Bachelor’s in Fine Arts degree from Istituto Marangoni Miami is a 4-year program established to implement all of the teachings needed in the fashion industry in order for students to succeed once they graduate and are in the real-world of fashion. IMM offers various branches in the fashion bachelor’s degree to choose from based on the applicant's interests and aspirations. A BFA in Fashion Design teaches students the knowledge and skills needed for designing clothing and accessories – pattern cutting, garment technology, etc. all while developing the student’s personal style.
-                </p>
-                <p>
-                  A BFA in Fashion Styling introduces concepts in visual communication, trend forecasting, and the analysis of style and brands to apply to ever changing technologies in the industry. A BFA in Fashion Business highlights the different methods and business types that are part of the global fashion industry through the aspects of management, marketing, and practices.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <div class="accordion-item-header">What is a bachelor’s degree in fashion?</div>
-            <div class="accordion-item-content">
+        <div class="accordion-new">
+          <div class="accordion-new-item active">
+            <div class="accordion-new-item-header">What is a bachelor’s degree in fashion?</div>
+            <div class="accordion-new-item-content">
               <div class="accordion-content-wrapper">
                 <p>
                   A Bachelor’s Degree in fashion or a Bachelor’s in Fine Arts degree from Istituto Marangoni Miami is a 4-year program established to implement all of the teachings needed in the fashion industry in order for students to succeed once they graduate and are in the real-world of fashion. IMM offers various branches in the fashion bachelor’s degree to choose from based on the applicant's interests and aspirations. A BFA in Fashion Design teaches students the knowledge and skills needed for designing clothing and accessories – pattern cutting, garment technology, etc. all while developing the student’s personal style.

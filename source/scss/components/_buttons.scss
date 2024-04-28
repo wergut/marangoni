@@ -11,6 +11,7 @@
   position: absolute;
   cursor: pointer;
   transition: 0.3s;
+  z-index: 1;
 
   &:hover {
     background-color: $--color-white;
@@ -86,9 +87,11 @@
 
   &:hover {
     background-color: $--color-red-hover-2;
+    color: $--color-white;
   }
   &:focus {
     background-color: $--color-red-focus;
+    color: $--color-white;
   }
 }
 
@@ -124,10 +127,12 @@
 
   &:hover {
     background-color: $--color-black;
+    color: $--color-red;
   }
 
   &:focus {
     color: $--color-red-focus;
+    color: $--color-red;
   }
 }
 
@@ -165,10 +170,12 @@
 
   &:hover {
     background-color: $--color-red-hover-2;
+    color: $--color-white;
   }
 
   &:focus {
     background-color: $--color-red-focus;
+    color: $--color-white;
   }
 }
 

@@ -9,13 +9,8 @@ h1, .h1 {
   width: 100%;
   text-transform: uppercase;
 
-  span {
-    display: block;
-    width: 100%;
-    font-weight: inherit;
-    b {
-      font-weight: 700;
-    }
+  strong {
+    font-weight: 700;
   }
 
 }
@@ -26,13 +21,10 @@ h2, .h2 {
   font-weight: 250;
   line-height: 60px;
   text-transform: uppercase;
+  text-align: initial;
 
-  span {
-    display: block;
-    width: 100%;
-    b {
-      font-weight: 700;
-    }
+  strong {
+    font-weight: 700;
   }
 }
 
@@ -41,6 +33,10 @@ h2, .h2 {
   font-weight: 700;
   line-height: 24px;
   margin-bottom: 10px;
+
+  strong {
+    font-weight: 700;
+  }
 }
 
 p {
