@@ -1,0 +1,34 @@
+.map-section {
+
+  .map-wrapper {
+    height: 578px;
+    width: 100%;
+    margin-top: 10px;
+
+    iframe {
+      height: inherit;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+  .h2 {
+    margin-bottom: 55px;
+  }
+
+  .map-section-content {
+
+    .image-wrapper {
+      margin-top: 55px;
+
+      img {
+        height: 371px;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .h2 {
+      margin-bottom: 30px;
+    }
+  }
+}

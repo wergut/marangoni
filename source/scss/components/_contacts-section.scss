@@ -1,0 +1,96 @@
+.contacts-section {
+
+  .container {
+    padding: 50px 40px;
+    border: 1px solid $--color-black;
+  }
+
+  .h2 {
+    margin-bottom: 50px;
+  }
+
+  .image-wrapper {
+    max-width: 400px;
+    width: 100%;
+    margin-left: auto;
+
+    img {
+      height: 400px;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .contacts-block-wrapper {
+    width: calc(100% - 400px);
+
+    .contact-block-item {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-bottom: 20px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+      .contact-block-title, .contact-block-subtitle {
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 34px;
+        width: 50%;
+      }
+
+      .contact-block-title {
+        color: $--color-black;
+      }
+
+      .contact-block-subtitle {
+        color: $--color-red;
+        padding: 0 40px;
+        display: block;
+      }
+    }
+
+    .contacts-block-socials {
+      display: flex;
+      align-items: center;
+      margin-top: 50px;
+
+      a {
+        display: block;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 36px;
+        width: 36px;
+        height: 36px;
+      }
+      a + a {
+        margin-left: 15px;
+      }
+
+      .link-facebook {
+        background-image: url("../img/icons/facebook-ico.svg");
+
+        &:hover {
+          background-image: url("../img/icons/facebook-hover.svg");
+        }
+      }
+      .link-instagram {
+        background-image: url("../img/icons/instagram-ico.svg");
+
+        &:hover {
+          background-image: url("../img/icons/insta-hover.svg");
+        }
+      }
+      .link-tic-toc {
+        background-image: url("../img/icons/tic-toc-ico.svg");
+
+        &:hover {
+          background-image: url("../img/icons/tik-toc-hover.svg");
+        }
+      }
+    }
+
+  }
+}
