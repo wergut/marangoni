@@ -22,3 +22,26 @@
     }
   }
 }
+
+@media (max-width: 1024px) {
+  .full-width-video {
+
+    .btn-circle-arrow {
+      margin-right: 48px;
+    }
+
+    .default-video-wrapper {
+      height: 430px;
+    }
+
+  }
+}
+
+@media (max-width: 600px) {
+  .full-width-video {
+
+    .default-video-wrapper {
+      height: 530px;
+    }
+  }
+}

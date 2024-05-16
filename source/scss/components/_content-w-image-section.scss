@@ -4,6 +4,10 @@
     margin-bottom: 52px;
   }
 
+  .block-pc-hidden {
+    display: none;
+  }
+
   .content-image {
 
     img {
@@ -43,4 +47,44 @@
     }
   }
 
+}
+
+@media (max-width: 1024px) {
+  .content-w-image-section {
+
+    .content-image {
+      margin-bottom: 30px;
+
+      img {
+        height: 400px;
+      }
+    }
+
+    .content-wrapper {
+
+      .text-description {
+        margin-bottom: 60px;
+      }
+    }
+
+    .content-bottom-image {
+      margin-top: 60px;
+
+      img {
+        max-width: 66%;
+      }
+    }
+
+    .h2 {
+      display: none;
+    }
+
+    .block-pc-hidden {
+      display: block;
+
+      .h2 {
+        display: block;
+      }
+    }
+  }
 }

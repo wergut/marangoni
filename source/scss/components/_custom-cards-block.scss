@@ -19,9 +19,32 @@
         }
       }
 
+      .block-pc-hidden {
+        display: none;
+      }
+
       .custom-item-content {
         max-width: 85%;
         margin-bottom: 50px;
+      }
+
+      .tags {
+        display: flex;
+        align-items: center;
+        margin: 0 -7.5px 30px;
+        width: calc(100% + 15px);
+
+        .tag {
+          padding: 0 7.5px;
+
+          span {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 14px;
+            text-transform: uppercase;
+            color: $--color-red;
+          }
+        }
       }
 
       .custom-item-title {
@@ -81,4 +104,110 @@
     }
   }
 
+}
+
+@media (max-width: 1024px) {
+  .custom-cards-section {
+
+    .custom-list {
+
+      .custom-list-item {
+        padding: 50px 40px;
+
+        .custom-item-content {
+          margin-bottom: 0;
+          max-width: 100%;
+        }
+
+        .custom-item-col:nth-of-type(1) {
+          padding: 0 25px 0 0;
+        }
+
+        .custom-card-image  {
+
+          img {
+            height: 157px;
+          }
+        }
+
+      }
+    }
+
+    .title-wrapper {
+      margin-bottom: 30px;
+    }
+  }
+
+  .custom-cards-blog {
+    .custom-list {
+
+      .custom-list-item {
+        flex-wrap: wrap;
+        padding: 30px 40px;
+
+        .custom-item-meta {
+          display: none;
+        }
+
+        .custom-card-image {
+          display: none;
+        }
+
+        .block-pc-hidden {
+          display: block;
+
+          .custom-item-meta {
+            display: flex;
+            margin-bottom: 10px;
+          }
+          .custom-card-image {
+            display: block;
+            margin-bottom: 30px;
+
+            img {
+              height: 240px;
+            }
+          }
+        }
+
+
+        .custom-item-col {
+
+          &:nth-of-type(1), &:nth-of-type(2) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media (max-width: 600px) {
+  .custom-cards-section {
+
+    .custom-list {
+
+      .custom-list-item {
+        padding: 30px 20px;
+        flex-wrap: wrap;
+
+        .custom-item-title {
+          margin-bottom: 10px;
+        }
+
+        .custom-item-col {
+
+          &:nth-of-type(1) {
+            width: 100%;
+          }
+          &:nth-of-type(2) {
+            width: 100%;
+            order: -1;
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
 }

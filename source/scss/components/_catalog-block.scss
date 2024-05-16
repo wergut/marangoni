@@ -4,6 +4,10 @@
     margin-bottom: 40px;
   }
 
+  .btn-for-tablet {
+    display: none;
+  }
+
   .text-description {
 
     p {
@@ -21,4 +25,35 @@
     }
   }
 
+}
+
+@media (max-width: 1024px) {
+  .catalog-section {
+    .btn-for-pc {
+      display: none;
+    }
+    .btn-for-tablet {
+      display: flex;
+      max-width: 396px;
+      width: 100%;
+      margin-top: 30px;
+    }
+  }
+}
+
+
+@media (max-width: 600px) {
+  .catalog-section {
+    .contact-block-include {
+      padding-top: 40px;
+      margin-top: 40px;
+
+      &:after {
+        height: 100%;
+      }
+    }
+    .btn-for-tablet {
+      max-width: 100%;
+    }
+  }
 }

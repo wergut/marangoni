@@ -24,6 +24,10 @@
 
 .students-work-slider {
 
+  .btn {
+    display: none;
+  }
+
   .swiper-button-prev, .swiper-button-next {
     bottom: 0;
     top: unset;
@@ -223,6 +227,75 @@
 @media (max-width: 1024px) {
   .swiper-slide {
     opacity: 1;
+  }
+
+  .events-section-slider, .testimonials-slider {
+
+    .swiper-slide {
+      opacity: 0;
+    }
+    .swiper-slide-visible {
+      opacity: 1;
+    }
+  }
+
+  .testimonials-slider {
+
+    .slide-wrapper {
+      flex-wrap: wrap;
+    }
+    .testimonial-image {
+      width: 100%;
+
+      img {
+        height: 611px;
+      }
+    }
+    .testimonial-content {
+      width: 100%;
+      padding: 50px 0 0;
+
+      .testimonial-description {
+        max-width: 65%;
+      }
+
+    }
+    .swiper-button-next {
+      left: unset;
+      right: 0;
+    }
+    .swiper-button-prev {
+      left: unset;
+      right: 70px;
+    }
+  }
+
+  .students-work-slider {
+     overflow: hidden;
+
+    .btn {
+      display: flex;
+      position: absolute;
+      right: 48px;
+      top: 0;
+      z-index: 5;
+    }
+
+    .swiper-slide {
+      width: calc(32% - 20px) !important;
+      display: flex;
+      align-items: flex-end;
+    }
+    .work-slide-wrapper .work-title:after {
+      margin-left: 60px;
+      min-width: 16px;
+    }
+    .swiper-slide-active {
+      width: calc(68% - 20px) !important;
+    }
+    .swiper-button-prev, .swiper-button-next {
+      display: none;
+    }
   }
 
 }

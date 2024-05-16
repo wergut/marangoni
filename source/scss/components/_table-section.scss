@@ -23,3 +23,47 @@
   }
 
 }
+
+@media (max-width: 1024px) {
+  .table-section {
+
+    .container {
+      padding: 0;
+    }
+
+
+
+    .table-wrapper {
+      overflow-y: auto;
+      margin-left: 42px;
+
+      &::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+        border-radius: 31px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: #F1F5FB;
+        border-radius: 31px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: $--color-red;
+        border-radius: 31px;
+      }
+    }
+
+    .text-description {
+      padding: 0 42px;
+      max-width: 80%;
+    }
+
+    .title-wrapper {
+      padding: 0 42px;
+      .link-red {
+        display: none;
+      }
+    }
+  }
+}

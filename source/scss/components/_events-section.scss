@@ -1,3 +1,25 @@
 .events-section {
   background-color: transparent;
 }
+
+@media (max-width: 1024px) {
+  .event-section-main {
+
+    .title-wrapper .btn {
+      margin-right: 48px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .events-section {
+
+    .title-wrapper .btn {
+      margin-right: 0;
+      position: absolute;
+      right: 24px;
+      z-index: 3;
+      top: 70px;
+    }
+  }
+}

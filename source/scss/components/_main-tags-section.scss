@@ -10,9 +10,10 @@
     width: calc(100% + 20px);
     padding-right: 20px;
 
-    .main-tag {
+    a {
       padding: 0 10px;
       margin-bottom: 20px;
+
 
       > span {
         padding: 0 20px;
@@ -35,6 +36,31 @@
         span {
           color: $--color-red;
           margin-left: 3px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .main-tags-section {
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-tags-section {
+    margin: 20px 0;
+
+    .main-tags-wrapper {
+
+      a {
+        margin-bottom: 10px;
+
+        > span {
+          height: initial;
+          padding: 10px 20px;
         }
       }
     }

@@ -18,6 +18,11 @@
 
     .h2 {
       z-index: 1;
+      margin-bottom: 0;
+
+      &:after {
+        display: none;
+      }
     }
 
     .banner-back-fixed {
@@ -55,5 +60,38 @@
 
   .h2 {
     color: $--color-white;
+  }
+}
+
+@media (max-width: 1024px) {
+  .page-banner {
+    margin-bottom: 20px;
+
+    .page-banner-wrapper  {
+      padding: 50px 26px;
+
+      .h2 {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .page-banner {
+    height: 245px;
+
+    .h2 {
+      font-size: 30px;
+      line-height: 30px;
+    }
+
+    .page-banner-wrapper  {
+      padding: 23px 20px;
+
+      .h2 {
+
+      }
+    }
   }
 }

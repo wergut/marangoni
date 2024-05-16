@@ -85,18 +85,23 @@
             }
           }
 
-          .td-title {
-
-            p {
-              font-size: 15px;
-              font-weight: 300;
-              line-height: 17px;
-              color: $--color-black;
+          tr.show {
+            .td-title:nth-of-type(2) {
+              display: block;
             }
+          }
+
+          .td-title {
+            text-transform: uppercase;
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 17px;
+            color: $--color-black;
 
             &:nth-of-type(2) {
               position: absolute;
               bottom: 15px;
+              display: none;
             }
           }
 
@@ -113,7 +118,7 @@
               border-right: 0;
             }
 
-            .td-column-title p {
+            .td-column-title {
               font-size: 28px;
               font-weight: 500;
               line-height: 34px;
@@ -171,5 +176,113 @@
         color: $--color-black;
       }
     }
+  }
+}
+
+
+.accordion-level-section {
+
+  .td-column-top {
+    height: 0;
+    transition: height 0.3s;
+    overflow: hidden;
+  }
+}
+.accordion-level-section .accordion-new .accordion-new-item .accordion-new-item-content {
+  height: initial!important;
+  max-height: 0;
+  transition: max-height 0.5s;
+}
+.accordion-level-section .accordion-new .accordion-new-item.active .accordion-new-item-content {
+  max-height: 6000px;
+}
+
+
+@media (max-width: 1024px) {
+  .accordion-level-section {
+    margin: 150px 0 100px;
+
+    .h2 {
+      margin-bottom: 30px;
+    }
+
+    .text-description-large {
+      max-width: 100%;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .accordion-level-section {
+
+    .text-description-large {
+      margin-bottom: 40px;
+    }
+
+    .accordion-new {
+
+      .accordion-new-item {
+
+        .accordion-new-item-header {
+          flex-wrap: wrap;
+          font-size: 20px;
+          line-height: 24px;
+
+          .accordion-new-header-name {
+            margin-left: 0;
+            margin-top: 15px;
+            text-transform: uppercase;
+          }
+          .accordion-new-header-status {
+            position: absolute;
+            top: 26px;
+            right: 0;
+          }
+        }
+
+        .accordion-new-item-content {
+
+          table {
+
+            .td-column-bottom {
+              flex-wrap: wrap;
+
+              .td-column-subtitle {
+                margin-bottom: 10px;
+              }
+            }
+
+            td:nth-of-type(2) {
+              padding-left: 20px;
+              padding-right: 20px;
+              padding-bottom: 20px;
+            }
+
+            .td-column-title {
+              margin-bottom: 20px;
+            }
+
+            .td-column-description-large {
+              font-size: 16px;
+              line-height: 22px;
+            }
+
+            .td-title {
+
+              &:nth-of-type(2) {
+                bottom: 48px;
+              }
+            }
+
+            th {
+              font-size: 12px;
+              line-height: 14px;
+              padding: 7px 0 26px;
+            }
+          }
+        }
+      }
+    }
+
   }
 }

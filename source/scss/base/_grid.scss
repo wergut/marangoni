@@ -81,6 +81,9 @@
 }
 
 @media (max-width: 1024px) {
+  .container {
+    padding: 0 42px;
+  }
   .col-md-1 {
     width: 8.33333333%;
   }
@@ -157,7 +160,7 @@
     width: 100%;
   }
   .container {
-    padding: 0 20px;
+    padding: 0 24px;
   }
 }
 

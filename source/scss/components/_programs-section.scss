@@ -6,6 +6,7 @@
 
   .h2 {
     margin-bottom: 50px;
+    max-width: 50%;
   }
 
   .programs-section-description {
@@ -17,6 +18,12 @@
 
     .programs-content-wrapper {
       width: 100%;
+      min-height: 360px;
+
+      h4:not(:first-child) {
+        margin-top: 0;
+        margin-bottom: 10px;
+      }
 
       .program-tab-content {
         display: flex;
@@ -30,11 +37,8 @@
         max-height: initial;
 
         &:nth-of-type(1) {
-          .program-content-left {
-            display: none;
-          }
           .program-content-right {
-            margin-top: -384px;
+            margin-top: -160px;
           }
         }
 
@@ -44,11 +48,16 @@
           visibility: visible;
           overflow: visible;
           transition: 0.3s;
-          margin-top: 130px;
         }
 
         .program-content {
           width: 40%;
+
+          img {
+            width: 100%;
+            object-fit: cover;
+            height: 370px;
+          }
 
           p {
             color: $--color-black;
@@ -58,12 +67,17 @@
           }
 
         }
+
+        .program-content-left p {
+          font-size: 20px;
+          line-height: 24px;
+        }
         .program-content-right {
           display: flex;
           flex-direction: column;
-          margin-top: -212px;
-          width: 31%;
+          width: 33%;
           margin-left: auto;
+          margin-top: 0;
 
           h2, .h2 {
             margin-bottom: 10px;
@@ -71,6 +85,7 @@
 
           p {
             margin-bottom: 30px;
+            text-transform: initial;
 
             &:last-of-type {
               margin-bottom: 0;
@@ -96,8 +111,12 @@
     .program-tabs {
       position: absolute;
       left: calc(40% + 40px);
-      top: 172px;
-      width: 25%;
+      top: 170px;
+      width: 21%;
+
+      .pc-hidden-content {
+        display: none;
+      }
 
       .link-red-arrow {
         margin-top: 50px;
@@ -197,4 +216,47 @@
     }
   }
 
+}
+
+@media (max-width: 1024px) {
+  .programs-section {
+
+    .tabs-block {
+
+      .program-tabs {
+        left: 42px;
+        width: calc(50% - 42px);
+        padding-right: 12px;
+
+        .pc-hidden-content {
+          display: block;
+        }
+      }
+
+      .programs-content-wrapper {
+        min-height: 636px;
+
+        .program-tab-content {
+
+          &:nth-of-type(1) .program-content-right {
+            margin-top: 0;
+          }
+
+          .program-content-right {
+            position: absolute;
+            right: 42px;
+            top: 0;
+            width: calc(50% - 42px);
+
+            img {
+              height: 756px;
+            }
+          }
+          .program-content-left {
+            display: none;
+          }
+        }
+      }
+    }
+  }
 }

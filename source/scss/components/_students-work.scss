@@ -12,3 +12,17 @@
     }
   }
 }
+
+@media (max-width: 1024px) {
+
+  .students-works {
+
+    .description {
+      margin-bottom: 100px;
+
+      p {
+        max-width: 100%;
+      }
+    }
+  }
+}

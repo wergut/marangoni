@@ -3,4 +3,34 @@
   .h2 {
     margin-bottom: 50px;
   }
+  .swiper-button-prev, .swiper-button-next {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .cards-section {
+
+    .title-wrapper {
+      position: relative;
+    }
+
+    .swiper-button-prev, .swiper-button-next {
+      display: flex;
+      top: 30px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .cards-section  {
+    .h2 {
+      margin-bottom: 0;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: none;
+    }
+  }
 }

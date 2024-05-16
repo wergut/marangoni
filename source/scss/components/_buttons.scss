@@ -41,6 +41,10 @@
   top: 82px;
   background-color: $--color-red;
   background-image: url(../img/icons/swiper-arrow-white.svg);
+
+  &:after {
+    display: none;
+  }
 }
 
 .swiper-button-next {
@@ -165,6 +169,7 @@
   width: 130px;
   min-width: 130px;
   height: 130px;
+  min-height: 130px;
   text-align: center;
   color: $--color-white;
 
@@ -192,5 +197,18 @@
     margin-bottom: 20px;
     height: 16px;
     background-image: url(../img/icons/arrow-white-rotated.svg);
+  }
+}
+
+@media (max-width: 600px) {
+  .btn-play {
+    width: 90px;
+    height: 90px;
+  }
+  .btn-circle {
+    width: 117px;
+    height: 117px;
+    min-height: 117px;
+    min-width: 117px;
   }
 }

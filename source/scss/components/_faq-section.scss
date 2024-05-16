@@ -18,3 +18,19 @@
   }
 
 }
+
+@media (max-width: 1024px) {
+  .faq-section {
+
+    .contact-block-include {
+      max-width: 100%;
+      margin-top: 116px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .faq-section {
+    overflow: hidden;
+  }
+}

@@ -23,6 +23,11 @@ h2, .h2 {
   text-transform: uppercase;
   text-align: initial;
 
+  span {
+    display: block;
+    width: 100%;
+  }
+
   strong {
     font-weight: 700;
   }
@@ -33,6 +38,7 @@ h2, .h2 {
   font-weight: 700;
   line-height: 24px;
   margin-bottom: 10px;
+  color: $--color-black;
 
   strong {
     font-weight: 700;
@@ -51,6 +57,23 @@ p {
   }
 }
 
+ul {
+
+  li {
+    font-weight: 400;
+
+    a {
+      color: inherit;
+      font-weight: 400;
+      text-decoration: underline;
+      &:hover {
+        text-decoration: underline;
+        color: inherit;
+      }
+    }
+  }
+}
+
 .text-description {
 
   p {
@@ -63,6 +86,12 @@ p {
       line-height: inherit;
       text-decoration: underline;
     }
+  }
+}
+
+.title-wrapper {
+  .h2 {
+    margin-bottom: 0;
   }
 }
 
@@ -98,6 +127,11 @@ a {
   color: $--color-grey-2;
   transition: 0.3s;
   cursor: pointer;
+  display: block;
+
+  br {
+    display: none;
+  }
 
   &:hover {
     color: $--color-red-hover;
@@ -140,5 +174,15 @@ a {
     height: 12px;
     background-image: url(../img/icons/arrow-red-ico.svg);
     margin-left: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  h2, .h2 {
+    font-size: 40px;
+    line-height: 40px;
+  }
+  .title-wrapper {
+    margin-bottom: 30px;
   }
 }

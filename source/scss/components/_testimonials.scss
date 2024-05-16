@@ -1,9 +1,29 @@
 .testimonials {
 
   .h2 {
-    margin-bottom: 30px;
+
+    span {
+      width: 100%;
+      display: block;
+    }
   }
   .description {
     margin-bottom: 100px;
+    max-width: 38%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .testimonials {
+    .h2 {
+      margin-bottom: 0;
+    }
+    .title-wrapper {
+      margin-bottom: 30px;
+    }
+    .description {
+      max-width: 60%;
+      margin-bottom: 50px;
+    }
   }
 }

@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
         modal.style.display = 'none';
         overlay.classList.remove('modal-open');
         resolve();
-      }, 500); // Длительность анимации fadeOut
+      }, 500);
     });
   }
 
@@ -206,10 +206,6 @@ var swiper1 = new Swiper(".staff-slider", {
   slidesPerView: 3,
   spaceBetween: 30,
   watchSlidesProgress: true,
-  navigation: {
-    nextEl: ".staff-slider .swiper-button-next",
-    prevEl: ".staff-slider .swiper-button-prev",
-  },
   breakpoints: {
     // when window width is >= 320px
     320: {
@@ -380,15 +376,16 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
       }
 
-      // Скрыть все изображения во всех врапере, кроме выбранного
       imageWrappers.forEach(wrapper => {
         if (wrapper !== accordionImageWrapper) {
-          wrapper.classList.remove('show'); // Убрать класс show у всех врапперов, кроме выбранного
+          wrapper.classList.remove('show');
         }
       });
 
-      // Отобразить выбранный враппер изображения
-      accordionImageWrapper.classList.add('show'); // Добавить класс show выбранному врапперу
+      accordionImageWrapper.classList.add('show');
     });
   });
 });
+
+
+

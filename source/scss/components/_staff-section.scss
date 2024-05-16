@@ -4,3 +4,31 @@
     max-width: 30%;
   }
 }
+
+@media (max-width: 1024px) {
+  .staff-section-new {
+
+    .h2 {
+      max-width: 50%;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .staff-section-new {
+
+    .title-wrapper {
+
+      .btn {
+        position: absolute;
+        top: 70px;
+        right: 24px;
+        z-index: 3;
+      }
+    }
+
+    .h2 {
+      max-width: 70%;
+    }
+  }
+}

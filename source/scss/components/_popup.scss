@@ -140,5 +140,60 @@
 }
 
 
+.modal-staff {
 
+  .modal-close {
+    right: 20px;
+    top: 20px;
+    background-image: url(../img/icons/modal-staff-close.svg);
+  }
+
+  .modal-staff-wrapper {
+    background-color: $--color-white;
+    display: flex;
+    max-width: 680px;
+    width: 100%;
+    margin: 0 auto;
+
+    .modal-staff-column {
+
+      .staff-card {
+        .staff-name {
+          max-width: 50%;
+        }
+      }
+
+      .staff-description {
+        margin-bottom: 30px;
+
+        p {
+          font-size: 20px;
+          font-weight: 300;
+          line-height: 24px;
+          color: $--color-black;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -moz-box;
+          -moz-box-orient: vertical;
+          display: -webkit-box;
+          -webkit-line-clamp: 19;
+          -webkit-box-orient: vertical;
+          line-clamp: 19;
+          box-orient: vertical;
+        }
+      }
+
+      &:nth-of-type(1) {
+        width: 45%;
+        padding-bottom: 25px;
+        position: relative;
+      }
+
+      &:nth-of-type(2) {
+        padding: 25px;
+        width: 55%;
+      }
+    }
+  }
+}
 

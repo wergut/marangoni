@@ -16,6 +16,15 @@ section.margin-control {
   }
 }
 
+p:has(iframe) {
+  width: 100%;
+  display: block;
+
+  iframe {
+    width: 100%;
+  }
+}
+
 section:has(.contact-block-include) {
   position: relative;
   overflow-x: clip;
@@ -189,6 +198,7 @@ section:has(.contact-block-include) {
     width: 100%;
     justify-content: space-between;
     margin-top: auto;
+    text-transform: uppercase;
 
     &:after {
       content: "";
@@ -307,6 +317,8 @@ section:has(.contact-block-include) {
 .table-wrapper {
   width: 100%;
   margin-bottom: 30px;
+  padding-bottom: 10px;
+
 
   table {
     width: 100%;
@@ -319,6 +331,13 @@ section:has(.contact-block-include) {
         font-weight: 700;
         text-transform: uppercase;
         background-color: transparent;
+        color: $--color-black;
+        text-align: center;
+
+        &:nth-of-type(1) {
+          padding-left: 0;
+          text-align: start;
+        }
       }
 
       td {
@@ -429,6 +448,9 @@ section:has(.contact-block-include) {
     font-weight: 700;
     line-height: 42px;
     max-width: 70%;
+    color: $--color-black;
+    display: block;
+    width: fit-content;
 
     a {
       font-size: 35px;
@@ -454,4 +476,151 @@ section:has(.contact-block-include) {
       color: $--color-black;
     }
   }
+}
+
+@media (max-width: 1024px) {
+  main {
+    margin-top: 0;
+  }
+  section.margin-control {
+    margin: 100px 0;
+  }
+  .staff-card .staff-name {
+    max-width: 100%;
+  }
+  .title-wrapper {
+    margin-bottom: 50px;
+
+    .btn {
+      margin-right: 0;
+    }
+  }
+  .contact-block-include {
+    background-color: #fbfbfc;
+    padding: 76px 30px;
+    max-width: 100%;
+
+    &:after {
+      display: none;
+    }
+  }
+  .contact-include-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    .btn {
+      width: calc(50% - 12px);
+
+      &:nth-of-type(1) {
+        margin-right: 12px;
+      }
+      &:nth-of-type(2) {
+        margin-left: 12px;
+      }
+    }
+
+    .contact-block-items {
+      width: 50%;
+      padding-right: 12px;
+    }
+    .contact-block-description {
+      width: 50%;
+      padding-left: 12px;
+      margin-bottom: 60px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .content-card-wrapper {
+    .content-card-image  {
+      img {
+        height: 187px;
+      }
+    }
+    .content-card-title {
+      font-size: 22px;
+      line-height: 26px;
+      height: 48px;
+    }
+  }
+  .staff-card {
+
+    .staff-name {
+      font-size: 23px;
+      line-height: 28px;
+      margin-bottom: 5px;
+      width: 100%;
+
+      a {
+        font-size: 23px;
+        line-height: 28px;
+        max-width: 50%;
+      }
+    }
+
+    .staff-position {
+      font-size: 16px;
+      line-height: 19px;
+    }
+
+    .staff-image {
+
+      img {
+        height: 361px;
+      }
+    }
+  }
+
+  .contact-block-include {
+    padding: 40px 0;
+    margin-top: 100px;
+    background-color: transparent;
+
+    &:after {
+      content: "";
+      display: block;
+      width: 4000px;
+      height: 100%;
+      position: absolute;
+      left: -24px;
+      top: 0;
+    }
+
+    .btn {
+      width: 100%;
+
+      &:nth-of-type(1) {
+        margin-right: 0;
+      }
+      &:nth-of-type(2) {
+        margin-left: 0;
+      }
+    }
+
+    .contact-block-items {
+      width: 100%;
+      padding-right: 0;
+      margin-bottom: 30px;
+    }
+    .contact-block-description {
+      width: 100%;
+      padding-left: 0;
+      margin-bottom: 20px;
+    }
+  }
+
+  .event-card {
+
+    .event-card-title {
+      font-size: 23px;
+      line-height: 28px;
+    }
+  }
+
+  .card-bordered-wrapper {
+    padding: 30px 20px;
+  }
+
+
 }
