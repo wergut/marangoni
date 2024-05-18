@@ -1,14 +1,5 @@
 .footer-menu {
-  margin: 0 -60px;
-  width: calc(100% + 120px);
 
-  [class*=col-] {
-    padding: 0 60px;
-  }
-
-  [class*=col-]:nth-of-type(2) {
-    padding-left: 90px;
-  }
 
   ul {
     list-style: none;

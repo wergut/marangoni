@@ -16,9 +16,12 @@
   .text-description {
     max-width: 690px;
 
-    p span {
+    * {
       font-size: 16px;
       line-height: 19px;
+      color: $--color-black;
+      font-weight: 300;
+      text-align: start;
     }
   }
 

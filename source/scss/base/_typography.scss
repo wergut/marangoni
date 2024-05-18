@@ -15,6 +15,17 @@ h1, .h1 {
 
 }
 
+a.admin-edit {
+  color: $--color-black;
+  display: flex;
+  width: fit-content;
+  margin-left: 10px;
+
+  &:hover {
+    color: $--color-red;
+  }
+}
+
 h2, .h2 {
   width: 100%;
   font-size: 60px;
@@ -31,6 +42,12 @@ h2, .h2 {
   strong {
     font-weight: 700;
   }
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
 }
 
 .h4, h4 {
