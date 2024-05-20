@@ -248,3 +248,19 @@ footer.footer-main {
     width: 26%;
   }
 }
+
+@media (max-width: 600px) {
+  footer.footer-main {
+
+    .footer-banner {
+      padding: 54px 40px 30px;
+    }
+
+    .footer-banner-links {
+
+      li {
+        padding: 28px 48px;
+      }
+    }
+  }
+}

@@ -1,6 +1,7 @@
 .fixed-widgets {
   opacity: 0;
-  transition: .3s ease-in .2s
+  transition: .3s ease-in .2s;
+  display: none;
 }
 
 .fixed-widgets .widget-left, .fixed-widgets .widget-right {
@@ -741,9 +742,21 @@ header.header-main {
       top: 97px;
 
       .popup-menu {
+
+        > .menu-item-has-children {
+
+          &:after {
+            top: 18px;
+          }
+          &:before {
+            top: 18px;
+          }
+        }
+
         .fixed-link {
           height: initial;
           position: initial;
+          width: 100%;
         }
 
         > li {
