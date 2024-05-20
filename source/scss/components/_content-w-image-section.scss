@@ -88,3 +88,39 @@
     }
   }
 }
+
+
+@media (max-width: 600px) {
+  .content-w-image-section {
+
+    .content-bottom-image {
+      margin-top: 50px;
+
+      img {
+        height: 241px;
+        max-width: 239px;
+      }
+    }
+
+    .content-wrapper {
+
+      .text-description {
+        max-height: 394px;
+        margin-bottom: 32px;
+      }
+    }
+    .content-image  {
+
+      img {
+        height: 200px;
+      }
+    }
+
+    .block-pc-hidden {
+
+      .h2 {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

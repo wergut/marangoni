@@ -492,6 +492,10 @@ section:has(.contact-block-include) {
   }
 }
 
+.pc-hidden-btn {
+  display: none;
+}
+
 @media (max-width: 1024px) {
   main {
     margin-top: 0;
@@ -634,6 +638,41 @@ section:has(.contact-block-include) {
 
   .card-bordered-wrapper {
     padding: 30px 20px;
+  }
+
+  .event-card-main {
+
+    .event-card-image {
+      height: 274px;
+    }
+
+    .event-card-date {
+      opacity: 0.6;
+    }
+
+    .event-card-title {
+      font-size: 20px;
+      line-height: 24px;
+      font-weight: 700;
+    }
+  }
+
+  .title-wrapper {
+
+    .btn {
+      display: none;
+    }
+  }
+
+  .pc-hidden-btn {
+    display: flex;
+
+    .btn {
+      position: absolute;
+      top: -65px;
+      z-index: 3;
+      right: 0;
+    }
   }
 
 

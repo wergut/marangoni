@@ -299,3 +299,26 @@
   }
 
 }
+
+@media (max-width: 600px) {
+  .testimonials-slider {
+    padding-bottom: 90px;
+
+    .swiper-button-prev {
+      left: 0;
+      right: unset;
+    }
+
+    .testimonial-content {
+
+      .testimonial-description {
+        max-width: 100%;
+
+        p {
+          font-size: 16px;
+          line-height: 26px;
+        }
+      }
+    }
+  }
+}

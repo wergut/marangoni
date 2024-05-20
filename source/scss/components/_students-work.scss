@@ -26,3 +26,48 @@
     }
   }
 }
+
+@media (max-width: 600px) {
+
+  .students-works .description {
+    margin-bottom: 0;
+  }
+
+  .students-work-slider {
+    padding-top: 60px;
+
+    .btn {
+      right: 0;
+    }
+
+    .work-slide-wrapper {
+
+
+      .image-wrapper {
+
+        img {
+          height: 240px;
+        }
+      }
+    }
+
+    .swiper-slide {
+      width: 100% !important;
+      align-items: flex-start;
+    }
+
+    .swiper-slide-active {
+      width: 100% !important;
+
+      .work-slide-wrapper {
+
+        .image-wrapper {
+
+          img {
+            height: 240px;
+          }
+        }
+      }
+    }
+  }
+}
