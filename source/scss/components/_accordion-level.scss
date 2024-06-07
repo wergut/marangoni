@@ -255,6 +255,12 @@
   }
 }
 
+@media (min-width: 601px) and (max-width: 1024px) {
+  .accordion-level-section .accordion-new .accordion-new-item .accordion-new-item-content table tr td:nth-of-type(1) {
+    width: 15%;
+  }
+}
+
 @media (max-width: 600px) {
   .accordion-level-section {
 
@@ -279,6 +285,7 @@
             font-size: 20px;
             line-height: 24px;
             font-weight: 700;
+            width: 100%;
           }
           .accordion-new-header-status {
             position: absolute;

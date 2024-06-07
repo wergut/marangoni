@@ -3,9 +3,9 @@
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  max-width: 1448px;
+  max-width: 1484px;
   width: 100%;
-  padding: 0 24px;
+  padding: 0 42px;
 }
 
 .container-fluid {
@@ -83,6 +83,13 @@
 @media (max-width: 1024px) {
   .container {
     padding: 0 42px;
+  }
+  [class*=col-] {
+    padding: 0 12px;
+  }
+  .row {
+    margin: 0 -12px;
+    width: calc(100% + 24px);
   }
   .col-md-1 {
     width: 8.33333333%;

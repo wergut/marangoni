@@ -16,6 +16,10 @@ body::-webkit-scrollbar-thumb {
   border: 3px solid $--color-red;
 }
 
+body:has(.breadcrumbs-section) section:first-of-type {
+  margin-top: 30px;
+}
+
 .default-video-wrapper {
   display: flex;
   align-items: center;
@@ -424,18 +428,6 @@ section:has(.contact-block-include) {
 
   .text-description {
     margin-bottom: 35px;
-
-    p {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      display: -moz-box;
-      -moz-box-orient: vertical;
-      display: -webkit-box;
-      -webkit-line-clamp: 7;
-      -webkit-box-orient: vertical;
-      line-clamp: 7;
-      box-orient: vertical;
-    }
   }
 
   .link-red {
@@ -446,13 +438,66 @@ section:has(.contact-block-include) {
 
 
 .staff-card {
+  position: relative;
+
+  .staff-popup-btn-mobile {
+    display: none;
+  }
+
+  .staff-popup-btn {
+    transform: rotate(45deg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30px;
+    display: block;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 20px;
+    transition: 0.3s;
+    top: 20px;
+    background-image: url(../img/icons/modal-staff-close.svg);
+  }
+
+  .staff-popup {
+    position: absolute;
+    left: calc(100% - 10px);
+    width: calc(100% + 50px);
+    background: #fff;
+    z-index: 1;
+    padding: 25px;
+    opacity: 0;
+    visibility: hidden;
+    max-width: 0;
+    height: 0;
+    overflow: hidden;
+    border-style: solid;
+    border-width: 1px 1px 1px 0;
+    border-color: #B2B3B7;
+
+    .staff-description {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -moz-box;
+      -moz-box-orient: vertical;
+      display: -webkit-box;
+      -webkit-line-clamp: 19;
+      -webkit-box-orient: vertical;
+      line-clamp: 19;
+      box-orient: vertical;
+      margin-bottom: 30px;
+    }
+  }
 
   .staff-image {
+    position: relative;
     margin-bottom: 10px;
 
     img {
       height: 490px;
       width: 100%;
+      filter: grayscale(1);
       object-fit: cover;
     }
   }
@@ -492,6 +537,24 @@ section:has(.contact-block-include) {
   }
 }
 
+.staff-card.show {
+  padding-bottom: 22px;
+  border-bottom: 1px solid #B2B3B7;
+
+  .staff-popup-btn {
+    transform: none;
+  }
+
+
+  .staff-popup {
+    opacity: 1;
+    visibility: visible;
+    max-width: initial;
+    overflow: visible;
+    height: calc(100% + 1px);
+  }
+}
+
 .pc-hidden-btn {
   display: none;
 }
@@ -525,6 +588,7 @@ section:has(.contact-block-include) {
   .contact-include-wrapper {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 50px;
 
     .btn {
       width: calc(50% - 12px);
@@ -569,6 +633,7 @@ section:has(.contact-block-include) {
       line-height: 28px;
       margin-bottom: 5px;
       width: 100%;
+      font-weight: 500;
 
       a {
         font-size: 23px;
@@ -672,6 +737,42 @@ section:has(.contact-block-include) {
       top: -65px;
       z-index: 3;
       right: 0;
+    }
+  }
+
+  .staff-card .staff-popup-btn {
+    top: unset;
+    bottom: 20px;
+  }
+
+  .staff-card.show {
+
+    .staff-popup-btn {
+      display: none;
+    }
+
+    .staff-popup {
+      left: 0;
+      width: 100%;
+      bottom: -100%;
+      border: 0;
+      box-shadow: 0 0 3px 0 #00000030;
+      min-height: 100%;
+      height: initial;
+
+      .staff-popup-btn-mobile {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 30px;
+        display: block;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        background-image: url(../img/icons/header-modal-close.svg);
+      }
     }
   }
 

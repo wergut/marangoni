@@ -1,0 +1,35 @@
+<!--header.html-->
+<%= _.template(require('../includes/common/header.html').default)({}) %>
+
+
+<section class="search-section">
+  <div class="container">
+    <div class="h2">Search</div>
+    <div class="search-wrapper">
+      <form action="">
+        <input type="search" placeholder="fashion...">
+      </form>
+    <div class="search-results">
+      <div class="search-empty">
+        <div class="empty-title">No results</div>
+        <div class="empty-description">
+          <p>Maybe you looking for it?</p>
+        </div>
+        <ul>
+          <li>
+            <a href="#">Fashion Design</a>
+          </li>
+          <li>
+            <a href="#">Fashion Styling</a>
+          </li>
+          <li>
+            <a href="#">Fashion Business</a>
+          </li>
+          <li>
+            <a href="#">Interior Design</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

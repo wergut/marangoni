@@ -1,0 +1,13 @@
+.blog-content {
+  .content-card-wrapper {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .blog-content {
+    .content-card-wrapper {
+      margin-bottom: 24px;
+    }
+  }
+}

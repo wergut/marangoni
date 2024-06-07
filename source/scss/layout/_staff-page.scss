@@ -1,7 +1,86 @@
 .cards-list-section {
   margin: 150px 0 100px;
+  overflow: hidden;
 
   .staff-card {
     margin-bottom: 50px;
+
+    .staff-image img {
+      filter: grayscale(0);
+    }
+  }
+
+  .title-wrapper {
+    margin-bottom: 50px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .cards-list-section {
+
+    .col-lg-3 {
+
+      &:nth-of-type(4n) {
+        .staff-card .staff-popup {
+          right: 100%;
+          left: unset;
+          border-width: 1px 0 1px 1px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+
+  .faculty-text-w-image-banner {
+    .banner-image {
+
+      img {
+        height: 350px;
+      }
+    }
+  }
+
+  .cards-list-section {
+    margin: 80px 0;
+
+    .staff-card {
+      margin-bottom: 24px;
+    }
+
+    [class*=col-] {
+      padding: 0 12px;
+    }
+    .row {
+      margin: 0 -12px;
+      width: calc(100% + 24px);
+    }
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .cards-list-section {
+
+    .col-lg-3 {
+
+      &:nth-of-type(3n) {
+        .staff-card .staff-popup {
+          right: 100%;
+          left: unset;
+          border-width: 1px 0 1px 1px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+
+  .cards-list-section {
+
+    .title-wrapper {
+      margin-bottom: 30px;
+    }
   }
 }

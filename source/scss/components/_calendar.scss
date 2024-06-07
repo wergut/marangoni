@@ -1,0 +1,330 @@
+#calendar {
+
+  .fc-h-event {
+    background-color: transparent!important;
+    border: 0!important;
+  }
+  .fc-scrollgrid-section-header .fc-scroller {
+    overflow: hidden!important;
+  }
+
+
+  td td {
+    .fc-daygrid-day-number {
+      transition: 0.3s;
+    }
+    .fc-event-title {
+      transition: 0.3s;
+    }
+  }
+
+  .fc-event-title {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    color: $--color-black;
+    white-space: break-spaces;
+  }
+
+  .fc-toolbar-title {
+    font-size: 60px!important;
+    font-weight: 250!important;
+    line-height: 60px!important;
+    color: $--color-black!important;
+  }
+
+  .fc-scroller {
+
+    &::-webkit-scrollbar {
+      width: 3px
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #F1F5FB;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $--color-red;
+      border-radius: 20px;
+      border: 1px solid $--color-red;
+    }
+  }
+
+  .fc-toolbar-chunk {
+
+    > button {
+      display: none;
+    }
+
+    .fc-button-group {
+
+      &:last-of-type {
+        margin-left: 30px!important;
+      }
+
+      &:nth-of-type(1) {
+
+        button {
+          width: fit-content!important;
+          height: 50px!important;
+          display: flex!important;
+          justify-content: center!important;
+          align-items: center!important;
+          padding: 0 30px 0 30px;
+          border-radius: 300px!important;
+          border: 1px solid $--color-black!important;
+          background: transparent!important;
+          font-size: 13px!important;
+          font-weight: 700!important;
+          line-height: 16px!important;
+          text-transform: uppercase!important;
+          color: $--color-black!important;
+          outline: none!important;
+          box-shadow: none!important;
+
+          &:focus {
+            outline: none!important;
+            box-shadow: none!important;
+          }
+
+          &:nth-of-type(4) {
+            display: none!important;
+          }
+        }
+
+        .fc-button-active {
+          background-color: $--color-black!important;
+          color: $--color-white!important;
+        }
+
+        button + button {
+          margin-left: 20px;
+        }
+
+      }
+
+      &:last-of-type {
+
+        button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 14px;
+          background-color: #C80D3A;
+          background-image: url(../img/icons/swiper-arrow-white.svg);
+          border: 0!important;
+          outline: none;
+          box-shadow: none;
+
+          &:nth-of-type(1) {
+            transform: rotate(-180deg);
+          }
+
+          &:nth-of-type(2) {
+            margin-left: 10px;
+          }
+
+          span:before {
+            display: none;
+          }
+        }
+
+      }
+
+    }
+
+  }
+
+  .fc-dayGridMonth-view {
+    .fc-scrollgrid-section-liquid > td {
+      border: 0!important;
+    }
+
+    .fc-scrollgrid-section-header > th {
+      border: 0 !important;
+    }
+
+
+    .fc-daygrid-day-top {
+      justify-content: flex-end;
+    }
+
+    table {
+      border: 0!important;
+      border-spacing: 5px 0;
+      border-collapse: initial;
+      padding: 0!important;
+
+      td td:hover {
+        .fc-daygrid-day-number {
+          color: $--color-red;
+        }
+        .fc-event-title {
+          color: $--color-red;
+        }
+      }
+    }
+    .fc-scrollgrid-sync-inner {
+      text-align: start;
+    }
+    .fc-col-header-cell-cushion {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 24px;
+    }
+
+    th {
+      border-bottom: 2px solid #b2b3b7 !important;
+      border-top: 0!important;
+      border-left: 0!important;
+      border-right: 0!important;
+      color: $--color-black!important;
+    }
+
+    td {
+      height: 260px;
+      border-top: 0!important;
+      border-left: 0!important;
+      color: $--color-black!important;
+      border-right: 0!important;
+      border-bottom: 2px solid #B2B3B7!important;
+      padding-bottom: 20px;
+    }
+  }
+
+  .fc-daygrid-more-link {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    color: #231f20;
+    white-space: break-spaces;
+  }
+
+  .fc-timeGridDay-view {
+    .fc-timegrid-slot {
+      padding: 10px;
+    }
+    .fc-day {
+      padding: 10px;
+    }
+  }
+
+  .fc-timeGridWeek-view {
+
+    .fc-timegrid-slot {
+      padding: 10px;
+    }
+
+    .fc-day {
+      padding: 10px;
+
+      .fc-event-title {
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+  }
+
+}
+
+@media (min-width: 1024px) {
+  #calendar {
+    height: 1358px;
+
+    .fc-scroller-harness-liquid {
+      height: 1298px!important;
+      .fc-scroller {
+        overflow: hidden!important;
+      }
+    }
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  #calendar {
+    height: 1358px;
+
+    .fc-scroller-harness-liquid {
+      height: 1587px!important;
+      .fc-scroller {
+        overflow: hidden!important;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  #calendar {
+
+    .fc-dayGridMonth-view {
+      .fc-toolbar-chunk:nth-of-type(2) {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      .fc-toolbar-title {
+        margin-bottom: 20px!important;
+      }
+
+      td {
+        height: 306px;
+      }
+
+      .fc-button-group:nth-of-type(1) {
+        margin-left: 0!important;
+      }
+
+      .fc-header-toolbar {
+        flex-wrap: wrap;
+      }
+
+      .fc-toolbar-chunk:nth-of-type(1) {
+        width: 100%;
+      }
+    }
+
+  }
+}
+
+
+@media (max-width: 600px) {
+  #calendar {
+    .fc-toolbar-title {
+      margin-bottom: 20px!important;
+      font-size: 40px!important;
+      line-height: 40px!important;
+    }
+    .fc-toolbar-chunk {
+      width: 100%;
+    }
+    .fc-button-group {
+      margin-left: 0!important;
+    }
+    .fc-toolbar-chunk .fc-button-group:last-of-type {
+      margin-left: 0!important;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: 20px;
+
+      button {
+        width: 50px;
+        height: 50px;
+        flex: 0;
+        min-width: 50px;
+      }
+    }
+    .fc-header-toolbar {
+      flex-wrap: wrap;
+    }
+    .fc-dayGridMonth-view td {
+      height: initial;
+    }
+  }
+}

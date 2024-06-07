@@ -1,0 +1,16 @@
+body.home {
+  .breadcrumbs-section {
+    display: none;
+  }
+  .main-banner {
+    margin-top: 0;
+
+    .container {
+      padding-top: 0;
+    }
+  }
+}
+
+body.home:has(.breadcrumbs-section) section:first-of-type {
+  margin-top: 0;
+}

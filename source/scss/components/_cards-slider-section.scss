@@ -1,11 +1,9 @@
 .cards-section {
 
-  .h2 {
-    margin-bottom: 50px;
+  .title-wrapper {
+    position: relative;
   }
-  .swiper-button-prev, .swiper-button-next {
-    display: none;
-  }
+
 }
 
 @media (max-width: 1024px) {
@@ -16,8 +14,8 @@
     }
 
     .swiper-button-prev, .swiper-button-next {
-      display: flex;
-      top: 30px;
+      top: unset;
+      bottom: 0;
     }
   }
 }

@@ -1,0 +1,131 @@
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<style>
+  body {
+    min-height: 100vh;
+  }
+</style>
+
+
+
+
+<section class="accordion-level-section">
+  <div class="container">
+    <div class="h2">DESIGNING <strong>THE FUTURE</strong></div>
+    <div class="accordion-level">
+      <div class="accordion-level-item open">
+        <div class="row">
+          <div class="col-lg-6 col-md-12 col-m-12">
+            <div class="accordion-level-image">
+              <img src="./img/accordion-section-image.png" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-12 col-m-12 content-right">
+            <div class="accordion-level-item-header">
+              Teaching Methods
+            </div>
+            <div class="accordion-level-item-content">
+              <div class="accordion-level-content-wrapper">
+                <p>Our undergraduate programs at Istituto Marangoni Miami are created to offer a dynamic learning environment that combines classroom instruction with practical experience. Students participate in practical assignments, industry partnerships, and hands-on workshops through project-based learning, which enables them to apply theoretical concepts to real-world scenarios and develop critical thinking, creativity, and problem-solving abilities.</p>
+                <p>Our undergraduate programs at Istituto Marangoni Miami are created to offer a dynamic learning environment that combines classroom instruction with practical experience. Students participate in practical assignments, industry partnerships, and hands-on workshops through project-based learning, which enables them to apply theoretical concepts to real-world scenarios and develop critical thinking, creativity, and problem-solving abilities.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-level-item">
+        <div class="row">
+          <div class="col-lg-6 col-md-12 col-m-12">
+            <div class="accordion-level-image">
+              <img src="./img/content-block-image.png" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-12 col-m-12 content-right">
+            <div class="accordion-level-item-header">
+              Teaching Methods
+            </div>
+            <div class="accordion-level-item-content">
+              <div class="accordion-level-content-wrapper">
+                <p>Our undergraduate programs at Istituto Marangoni Miami are created to offer a dynamic learning environment that combines classroom instruction with practical experience. Students participate in practical assignments, industry partnerships, and hands-on workshops through project-based learning, which enables them to apply theoretical concepts to real-world scenarios and develop critical thinking, creativity, and problem-solving abilities.</p>
+                <p>Our undergraduate programs at Istituto Marangoni Miami are created to offer a dynamic learning environment that combines classroom instruction with practical experience. Students participate in practical assignments, industry partnerships, and hands-on workshops through project-based learning, which enables them to apply theoretical concepts to real-world scenarios and develop critical thinking, creativity, and problem-solving abilities.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-level-item">
+        <div class="row">
+          <div class="col-lg-6 col-md-12 col-m-12">
+            <div class="accordion-level-image">
+              <img src="" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-12 col-m-12 content-right">
+            <div class="accordion-level-item-header">
+              Teaching Methods
+            </div>
+            <div class="accordion-level-item-content">
+              <div class="accordion-level-content-wrapper">
+                <p>Our undergraduate programs at Istituto Marangoni Miami are created to offer a dynamic learning environment that combines classroom instruction with practical experience. Students participate in practical assignments, industry partnerships, and hands-on workshops through project-based learning, which enables them to apply theoretical concepts to real-world scenarios and develop critical thinking, creativity, and problem-solving abilities.</p>
+                <p>Our undergraduate programs at Istituto Marangoni Miami are created to offer a dynamic learning environment that combines classroom instruction with practical experience. Students participate in practical assignments, industry partnerships, and hands-on workshops through project-based learning, which enables them to apply theoretical concepts to real-world scenarios and develop critical thinking, creativity, and problem-solving abilities.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Get all accordion items
+  const accordionItems = document.querySelectorAll('.accordion-level-item');
+
+  // Get the first accordion item
+  const firstItem = document.querySelector('.accordion-level-item');
+
+  // Check if there's no open accordion item
+  const isOpen = document.querySelector('.accordion-level-item.open');
+
+  // If no open accordion item, add a custom class to the first item
+  if (!isOpen && firstItem !== null) {
+    firstItem.classList.add('accordion-closed');
+  }
+
+  // Get the first accordion image if it exists
+  const firstItemImage = document.querySelector('.accordion-level-item .accordion-level-image img');
+  const firstImageSrc = firstItemImage ? firstItemImage.src : null;
+
+  // Loop through each accordion item
+  accordionItems.forEach(item => {
+    // Add click event listener to header
+    const header = item.querySelector('.accordion-level-item-header');
+    header.addEventListener('click', () => {
+      // Toggle open class on clicked item
+      item.classList.toggle('open');
+
+
+      // Add show class to the active item
+      accordionItems.forEach(accItem => {
+        if (accItem !== item && accItem.classList.contains('open')) {
+          accItem.classList.remove('open');
+        }
+      });
+
+      // Add custom class to the first item if no open accordion item
+      const isOpenAfterClick = document.querySelector('.accordion-level-item.open');
+      if (!isOpenAfterClick && firstItem !== null) {
+        firstItem.classList.add('accordion-closed');
+      } else {
+        firstItem.classList.remove('accordion-closed');
+      }
+    });
+  });
+</script>
+
+
+<!--footer.html-->
+<%= _.template(require('../includes/common/footer.html').default)({}) %>

@@ -1,0 +1,21 @@
+.media-section {
+
+  .title-wrapper {
+    margin-bottom: 50px;
+  }
+
+  .content-card-wrapper {
+    margin-bottom: 40px;
+
+  }
+
+
+}
+
+@media (max-width: 1024px) {
+  .media-section {
+    .content-card-wrapper {
+      margin-bottom: 24px;
+    }
+  }
+}

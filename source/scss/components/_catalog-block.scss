@@ -8,12 +8,8 @@
     display: none;
   }
 
-  .text-description {
-
-    p {
-      font-size: 20px;
-      line-height: 24px;
-    }
+  .link-red {
+    margin-top: 40px;
   }
 
   .contact-block-include {
@@ -29,6 +25,11 @@
 
 @media (max-width: 1024px) {
   .catalog-section {
+
+    .contact-block-include {
+      margin-top: 50px;
+    }
+
     .btn-for-pc {
       display: none;
     }
@@ -44,6 +45,22 @@
 
 @media (max-width: 600px) {
   .catalog-section {
+
+    .contact-block-include {
+      margin-top: 40px;
+    }
+
+    .h2 {
+      font-size: 37px;
+      line-height: 37px;
+      margin-bottom: 30px;
+    }
+
+    .text-description p {
+      font-size: 16px;
+      line-height: 19px;
+    }
+
     .contact-block-include {
       padding-top: 40px;
       margin-top: 40px;

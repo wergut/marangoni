@@ -12,7 +12,12 @@
 
     a {
       padding: 0 10px;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
+
+      div {
+        color: $--color-black;
+        padding-right: 5px;
+      }
 
 
       > span {
