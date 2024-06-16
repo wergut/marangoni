@@ -1,0 +1,55 @@
+<!--header.html-->
+<%= _.template(require('../includes/common/header.html').default)({}) %>
+
+<section class="section-404">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-7 col-md-7 col-m-12">
+        <div class="title-404">404</div>
+        <div class="subtitle-404">We can’t find that page</div>
+        <div class="text-description">
+          <p>Sorry, the page you are looking for doesn't exist or has been moved. Try searching our site:</p>
+        </div>
+        <div class="search-wrapper">
+          <form action="">
+            <input type="search">
+            <button class="submit-btn" type="submit"></button>
+          </form>
+        </div>
+        <div class="buttons-wrapper">
+          <a href="#" class="btn btn-red">Go back</a>
+          <a href="#" class="btn btn-bordered">go to the main page</a>
+        </div>
+        <div class="popular-block">
+          <div class="title">Popular sections</div>
+          <ul>
+            <li>
+              <a href="#">undergraduate</a>
+            </li>
+            <li>
+              <a href="#">graduate</a>
+            </li>
+            <li>
+              <a href="#">vocational</a>
+            </li>
+            <li>
+              <a href="#">pre-college courses</a>
+            </li>
+            <li>
+              <a href="#">contact us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-5 col-md-5 col-m-12">
+        <div class="image-wrapper">
+          <img src="./img/back-404.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--footer.html-->
+<%= _.template(require('../includes/common/footer.html').default)({}) %>
